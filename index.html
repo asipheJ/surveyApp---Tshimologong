@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase App + Database (the core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+
+<script>
+  // Your Firebase config (replace with your actual config)
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDrQrQF_TGtq5uhtl2hZTYm3sGkMzonEWU",
+  authDomain: "tshimosurveyapp.firebaseapp.com",
+  databaseURL: "https://tshimosurveyapp-default-rtdb.firebaseio.com",
+  projectId: "tshimosurveyapp",
+  storageBucket: "tshimosurveyapp.firebasestorage.app",
+  messagingSenderId: "542951523433",
+  appId: "1:542951523433:web:075522f1fe718a492e8ef8",
+  measurementId: "G-J29Q8T9YXX"
+};
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">_survey</div>
+        <nav>
+            <a href="#form-section">FILL OUT SURVEY</a>
+            <a href="results.html">VIEW SURVEY RESULTS</a>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <div class="section-label">Personal Details : </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="fullnames">Full Names</label>
+                <input type="text" id="fullnames">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="text" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="number">Contact Number</label>
+                <input type="text" id="number">
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="section-label">What is your favorite food?</div>
+        <div class="checkbox-group">
+            <div class="checkbox-option">
+                <input type="checkbox" id="pizza">
+                <label for="pizza">Pizza</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="pasta">
+                <label for="pasta">Pasta</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="papwors">
+                <label for="papwors">Pap and Wors</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+    </section>
+    
+    <p>Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being"strongly disagree."</p>
+    <section class="form-section">
+        <div class="section-label"></div>
+        <table class="rating-table">
+            <thead>
+                <tr class="table-header">
+                    <th></th>
+                    <th>Strongly Agree</th>
+                    <th>Agree</th>
+                    <th>Neutral</th>
+                    <th>Disagree</th>
+                    <th>Strongly Disagree</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I like to watch movies</td>
+                    <td><input type="radio" name="movies" value="strongly-agree"></td>
+                    <td><input type="radio" name="movies" value="agree"></td>
+                    <td><input type="radio" name="movies" value="neutral"></td>
+                    <td><input type="radio" name="movies" value="disagree"></td>
+                    <td><input type="radio" name="movies" value="strongly-disagree"></td>
+                </tr>
+                <tr>
+                    <td>I like to listen to radio</td>
+                    <td><input type="radio" name="tv" value="strongly-agree"></td>
+                    <td><input type="radio" name="tv" value="agree"></td>
+                    <td><input type="radio" name="tv" value="neutral"></td>
+                    <td><input type="radio" name="tv" value="disagree"></td>
+                    <td><input type="radio" name="tv" value="strongly-disagree"></td>
+                </tr>
+                <tr>
+                    <td>I like to eat out</td>
+                    <td><input type="radio" name="radio" value="strongly-agree"></td>
+                    <td><input type="radio" name="radio" value="agree"></td>
+                    <td><input type="radio" name="radio" value="neutral"></td>
+                    <td><input type="radio" name="radio" value="disagree"></td>
+                    <td><input type="radio" name="radio" value="strongly-disagree"></td>
+                </tr>
+                <tr>
+                    <td>I like to watch TV</td>
+                    <td><input type="radio" name="food" value="strongly-agree"></td>
+                    <td><input type="radio" name="food" value="agree"></td>
+                    <td><input type="radio" name="food" value="neutral"></td>
+                    <td><input type="radio" name="food" value="disagree"></td>
+                    <td><input type="radio" name="food" value="strongly-disagree"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="form-section">
+        <div class="submit-container">
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
