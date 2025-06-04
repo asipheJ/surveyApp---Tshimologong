@@ -1,18 +1,26 @@
+<<<<<<< HEAD
 body{
     font-family: 'Roboto', sans-serif;
 }
 
+=======
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+<<<<<<< HEAD
     margin-bottom: 60px;
     margin-top: 30px;
+=======
+    border-bottom: 1px solid #ddd;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 nav a {
     margin-left: 15px;
     text-decoration: none;
+<<<<<<< HEAD
     color: #000000;
     margin-right: 20px;
 }
@@ -28,6 +36,9 @@ nav a.active{
 
 .form-container{
     margin-left: 90px;
+=======
+    color: #333;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 .form-section {
     display: flex;
@@ -36,6 +47,10 @@ nav a.active{
 }
 .section-label {
     margin-right: 20px;
+<<<<<<< HEAD
+=======
+    font-weight: bold;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
     white-space: nowrap;
 }
 
@@ -51,16 +66,23 @@ nav a.active{
 .form-group input {
     padding: 8px;
     width: 250px;
+<<<<<<< HEAD
     border: 1.5px solid rgb(0, 162, 255);
     border-radius: 2px;
 }
 
 
+=======
+}
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 15px;
+<<<<<<< HEAD
     margin-bottom: 50px;
+=======
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 .checkbox-option {
     display: flex;
@@ -68,6 +90,7 @@ nav a.active{
     gap: 5px;
 }
 
+<<<<<<< HEAD
 .custom-checkbox input[type="checkbox"] {
     display: none;
 }
@@ -97,17 +120,22 @@ nav a.active{
     transform: rotate(45deg);
 }
 
+=======
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 
 .form-group label {
     margin-bottom: 5px;
     font-size: 14px;
 }
+<<<<<<< HEAD
 
 .survey-instructions {
     margin-left: 20px;
 }
 
 
+=======
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 .rating-scale {
     display: flex;
     gap: 10px;
@@ -118,21 +146,41 @@ nav a.active{
     align-items: center;
 }
 .rating-table {
+<<<<<<< HEAD
     width: 50%;
+=======
+    width: 70%;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
     border-collapse: collapse;
     margin-top: 15px;
 }
 
+<<<<<<< HEAD
 .rating-table th,
+=======
+.rating-table th, 
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 .rating-table td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
+<<<<<<< HEAD
     font-weight: lighter;
+=======
+}
+
+.rating-table .table-header {
+    background-color: #f2f2f2; /* Light grey background */
+    font-weight: bold;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 
 .rating-table td:first-child {
     text-align: left;
+<<<<<<< HEAD
+=======
+    font-weight: bold;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 
 .rating-table input[type="radio"] {
@@ -147,11 +195,17 @@ nav a.active{
 
 .submit-btn {
     padding: 12px 30px;
+<<<<<<< HEAD
     background-color: rgb(0, 162, 255);
     color: white;
     border: none;
     padding-left: 50px;
     padding-right: 50px;
+=======
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
@@ -160,6 +214,7 @@ nav a.active{
 }
 
 .submit-btn:hover {
+<<<<<<< HEAD
     background-color: rgb(0, 162, 255);
 }
 
@@ -173,10 +228,14 @@ h1{
     width: 100%;
     max-width: 1200px;
     margin: 10px auto;
+=======
+    background-color: #45a049; /* Darker green */
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 
 .stats-section {
     width: 100%;
+<<<<<<< HEAD
     max-width: 650px;
     margin: 0 auto 2rem auto;
     padding: 1rem 0;
@@ -222,6 +281,21 @@ h1{
         min-width: 160px;
         margin-right: 0.5rem;
     }
+=======
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+h1{
+    text-align: center;
+}
+
+.stats-section .stat-value {
+    font-weight: bold;
+    color: #2a6496;
+    text-align: left;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
 }
 
 .loading::after {
@@ -251,12 +325,17 @@ h1{
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
+<<<<<<< HEAD
     background: rgb(0, 162, 255);
+=======
+    background: #4285f4;
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
     color: white;
     text-decoration: none;
     border-radius: 4px;
 }
 
+<<<<<<< HEAD
 
 
 .rating-table thead tr {
@@ -425,3 +504,16 @@ h1{
         height: 50px;
     }
 }
+=======
+.stat-value {
+    font-weight: bold;
+    color: #4285f4;
+}
+
+.stats-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+>>>>>>> 59c3bda7e3f335b8de3070002ed592ebfc70536a
