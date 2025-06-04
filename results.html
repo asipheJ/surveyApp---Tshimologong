@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasheSurvey - Results</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- My Firebase configuration -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDrQrQF_TGtq5uhtl2hZTYm3sGkMzonEWU",
+            authDomain: "tshimosurveyapp.firebaseapp.com",
+            databaseURL: "https://tshimosurveyapp-default-rtdb.firebaseio.com",
+            projectId: "tshimosurveyapp",
+            storageBucket: "tshimosurveyapp.firebasestorage.app",
+            messagingSenderId: "542951523433",
+            appId: "1:542951523433:web:075522f1fe718a492e8ef8",
+            measurementId: "G-J29Q8T9YXX"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo"><b>_survey</b></div>
+        <nav>
+            <a href="index.html">FILL OUT SURVEY</a>
+            <a href="results.html" class="active">VIEW SURVEY RESULTS</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Survey Results</h1>
+
+
+        <div class="stats-container">
+            <div class="stats-section">
+                <div class="stat-row">
+                    <span class="stat-label">Total number of surveys :</span>
+                    <span class="stat-value" id="total-surveys">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Average Age :</span>
+                    <span class="stat-value" id="avg-age">0 years</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Oldest person who participated in survey :</span>
+                    <span class="stat-value" id="max-age">0 years</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Youngest person who participated in survey :</span>
+                    <span class="stat-value" id="min-age">0 years</span>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-row">
+                    <span class="stat-label">Percentage of people who like Pizza :</span>
+                    <span class="stat-value" id="pizza_percent">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Percentage of people who like Pasta :</span>
+                    <span class="stat-value" id="pasta_percent">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Percentage of people who like Pap and Wors :</span>
+                    <span class="stat-value" id="pap_wors_percent">0%</span>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-row">
+                    <span class="stat-label">People who like to watch movies :</span>
+                    <span class="stat-value" id="movies_avg">0/5</span>
+                    <div class="rating-stars" id="movies_stars"></div>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">People who like to listen to radio :</span>
+                    <span class="stat-value" id="radio_avg">0/5</span>
+                    <div class="rating-stars" id="radio_stars"></div>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">People who like to eat out :</span>
+                    <span class="stat-value" id="eat_out_avg">0/5</span>
+                    <div class="rating-stars" id="eat_out_stars"></div>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">People who like to watch TV:</span>
+                    <span class="stat-value" id="tv_avg">0/5</span>
+                    <div class="rating-stars" id="tv_stars"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="message-container"></div>
+    </main>
+
+    <script src="results.js"></script>
+</body>
+</html>

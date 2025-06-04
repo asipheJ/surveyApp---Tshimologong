@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasheSurvey - Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="htts://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- My Firebase configurartion -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDrQrQF_TGtq5uhtl2hZTYm3sGkMzonEWU",
+            authDomain: "tshimosurveyapp.firebaseapp.com",
+            databaseURL: "https://tshimosurveyapp-default-rtdb.firebaseio.com",
+            projectId: "tshimosurveyapp",
+            storageBucket: "tshimosurveyapp.firebasestorage.app",
+            messagingSenderId: "542951523433",
+            appId: "1:542951523433:web:075522f1fe718a492e8ef8",
+            measurementId: "G-J29Q8T9YXX"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo"><b>_survey</b></div>
+        <nav>
+            <a href="index.html" class="active">FILL OUT SURVEY</a>
+            <a href="results.html">VIEW SURVEY RESULTS</a>
+        </nav>
+    </header>
+
+    <form id="survey-form">
+        <section class="form-section">
+            <div class="section-label">Personal Details:</div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="fullnames">Full Names</label>
+                    <input type="text" id="fullnames" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required max="<?php echo date('Y-m-d'); ?>">
+                </div>
+
+                <div class="form-group">
+                    <label for="number">Contact Number</label>
+                    <input type="tel" id="number" required>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="section-label">What is your favorite food? </div>
+            <div class="checkbox-group">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="pizza" name="food" value="pizza">
+                    <span></span> Pizza
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="pasta" name="food" value="pasta">
+                    <span></span> Pasta
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="papwors" name="food" value="pap and wors">
+                    <span></span> Pap and Wors
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="other" name="food" value="other">
+                    <span></span> Other
+                </label>
+
+            </div>
+            
+        </section>
+
+        <p class="survey-instructions">Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being "strongly disagree."</p>
+        <section class="form-section">
+            <table class="rating-table">
+                <thead>
+                    <tr class="table-header">
+                        <th></th>
+                        <th>Strongly Agree</th>
+                        <th>Agree</th>
+                        <th>Neutral</th>
+                        <th>Disagree</th>
+                        <th>Strongly Disagree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I like to watch movies</td>
+                        <td><input type="radio" id="movies_strongly_agree" name="movies" value="strongly-agree" required></td>
+                        <td><input type="radio" id="movies_agree" name="movies" value="agree"></td>
+                        <td><input type="radio" id="movies_neutral" name="movies" value="neutral"></td>
+                        <td><input type="radio" id="movies_disagree" name="movies" value="disagree"></td>
+                        <td><input type="radio" id="movies_strongly_disagree" name="movies" value="strongly-disagree"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to listen to radio</td>
+                        <td><input type="radio" id="radio_strongly_agree" name="radio" value="strongly-agree" required></td>
+                        <td><input type="radio" id="radio_agree" name="radio" value="agree"></td>
+                        <td><input type="radio" id="radio_neutral" name="radio" value="neutral"></td>
+                        <td><input type="radio" id="radio_disagree" name="radio" value="disagree"></td>
+                        <td><input type="radio" id="radio_strongly_disagree" name="radio" value="strongly-disagree"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to eat out</td>
+                        <td><input type="radio" id="eatOut_strongly_agree" name="eatOut" value="strongly-agree" required></td>
+                        <td><input type="radio" id="eatOut_agree" name="eatOut" value="agree"></td>
+                        <td><input type="radio" id="eatOut_neutral" name="eatOut" value="neutral"></td>
+                        <td><input type="radio" id="eatOut_disagree" name="eatOut" value="disagree"></td>
+                        <td><input type="radio" id="eatOut_strongly_disagree" name="eatOut" value="strongly-disagree"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to watch TV</td>
+                        <td><input type="radio" id="tv_strongly_agree" name="tv" value="strongly-agree" required></td>
+                        <td><input type="radio" id="tv_agree" name="tv" value="agree"></td>
+                        <td><input type="radio" id="tv_neutral" name="tv" value="neutral"></td>
+                        <td><input type="radio" id="tv_disagree" name="tv" value="disagree"></td>
+                        <td><input type="radio" id="tv_strongly_disagree" name="tv" value="strongly-disagree"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="form-section">
+            <div class="submit-container">
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </div>
+        </section>
+    </form>
+    <div id="custom-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <img src="logo.png" alt="Logo" class="modal-logo">
+          <div id="modal-message"></div>
+          <button id="close-modal-btn">OK</button>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
